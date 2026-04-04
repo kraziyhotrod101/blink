@@ -1,0 +1,16 @@
+[package]
+name = "blink"
+version = "0.1.0"
+edition = "2024"
+
+[lib]
+name = "pam_blink"
+crate-type = ["cdylib"]
+
+[dependencies]
+opencv = { version = "0.98.2", optional = true }
+pamsm = "0.5.5"
+
+[features]
+default = ["daemon"]
+daemon = ["opencv"]
